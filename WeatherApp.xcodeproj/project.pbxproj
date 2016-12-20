@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2DCCF4F21E0986D100976741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF4F11E0986D100976741 /* AppDelegate.swift */; };
-		2DCCF4F41E0986D100976741 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF4F31E0986D100976741 /* ViewController.swift */; };
 		2DCCF4F71E0986D100976741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCCF4F51E0986D100976741 /* Main.storyboard */; };
 		2DCCF4F91E0986D100976741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DCCF4F81E0986D100976741 /* Assets.xcassets */; };
 		2DCCF4FC1E0986D100976741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCCF4FA1E0986D100976741 /* LaunchScreen.storyboard */; };
 		2DCCF5071E0986D100976741 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF5061E0986D100976741 /* WeatherAppTests.swift */; };
 		2DCCF5121E0986D100976741 /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF5111E0986D100976741 /* WeatherAppUITests.swift */; };
+		2DCCF5201E0989F400976741 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF51F1E0989F400976741 /* WeatherViewController.swift */; };
+		2DCCF5231E098A5E00976741 /* BaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF5221E098A5E00976741 /* BaseReference.swift */; };
+		2DCCF5261E098A7D00976741 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCF5251E098A7D00976741 /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		2DCCF4EE1E0986D100976741 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCCF4F11E0986D100976741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DCCF4F31E0986D100976741 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2DCCF4F61E0986D100976741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DCCF4F81E0986D100976741 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DCCF4FB1E0986D100976741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		2DCCF50D1E0986D100976741 /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCCF5111E0986D100976741 /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		2DCCF5131E0986D100976741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DCCF51F1E0989F400976741 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherViewController.swift; path = Controller/WeatherViewController.swift; sourceTree = "<group>"; };
+		2DCCF5221E098A5E00976741 /* BaseReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseReference.swift; path = Model/BaseReference.swift; sourceTree = "<group>"; };
+		2DCCF5251E098A7D00976741 /* WeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherView.swift; path = View/WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				2DCCF4F11E0986D100976741 /* AppDelegate.swift */,
-				2DCCF4F31E0986D100976741 /* ViewController.swift */,
 				2DCCF4F51E0986D100976741 /* Main.storyboard */,
 				2DCCF4F81E0986D100976741 /* Assets.xcassets */,
 				2DCCF4FA1E0986D100976741 /* LaunchScreen.storyboard */,
 				2DCCF4FD1E0986D100976741 /* Info.plist */,
+				2DCCF5211E0989FF00976741 /* Controller */,
+				2DCCF5241E098A6100976741 /* Model */,
+				2DCCF5271E098A8000976741 /* View */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -123,6 +129,30 @@
 				2DCCF5131E0986D100976741 /* Info.plist */,
 			);
 			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		2DCCF5211E0989FF00976741 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DCCF51F1E0989F400976741 /* WeatherViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2DCCF5241E098A6100976741 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DCCF5221E098A5E00976741 /* BaseReference.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2DCCF5271E098A8000976741 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DCCF5251E098A7D00976741 /* WeatherView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCCF4F41E0986D100976741 /* ViewController.swift in Sources */,
+				2DCCF5201E0989F400976741 /* WeatherViewController.swift in Sources */,
 				2DCCF4F21E0986D100976741 /* AppDelegate.swift in Sources */,
+				2DCCF5231E098A5E00976741 /* BaseReference.swift in Sources */,
+				2DCCF5261E098A7D00976741 /* WeatherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +537,7 @@
 				2DCCF5181E0986D100976741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DCCF5191E0986D100976741 /* Build configuration list for PBXNativeTarget "WeatherAppTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +546,7 @@
 				2DCCF51B1E0986D100976741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DCCF51C1E0986D100976741 /* Build configuration list for PBXNativeTarget "WeatherAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +555,7 @@
 				2DCCF51E1E0986D100976741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
